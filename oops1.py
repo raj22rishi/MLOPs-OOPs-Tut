@@ -44,13 +44,22 @@ class chatbook:
             pwd = input("Enter your password: ")
             if self.username == uname and self.password == pwd:
                 print("You have signed in successful;y !! ")
+                self.loggedin = True
             else:
                 print("Please input correct details! ")
                 
             print("/n")
             self.menu()
                 
+    def my_post(self):
+        if self.loggedin == True:
+            txt = input("Enter your message here -> ")
+            print(f"following content has been posted. -> {txt}")
+        else:
+            print("you need to sign in first")
             
+        
+        
         
             
 obj = chatbook()
